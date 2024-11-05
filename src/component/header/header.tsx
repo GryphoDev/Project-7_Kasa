@@ -16,8 +16,8 @@ export function Header() {
           </li>
           <li>
             <Link
-              className={location.pathname === "/a-propos" ? "active" : ""}
-              to="/a-propos"
+              className={location.pathname === "/about" ? "active" : ""}
+              to="/about"
             >
               A Propos
             </Link>
