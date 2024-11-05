@@ -1,7 +1,10 @@
+import { Banner } from "../component/banner/banner";
+import imgApropos from "../utils/image/imgApropos.png";
+
 export function APropos() {
   return (
-    <div>
-      <h1>A propos</h1>
-    </div>
+    <>
+      <Banner darken="0.3" backgroundImage={imgApropos}></Banner>
+    </>
   );
 }
