@@ -1,0 +1,21 @@
+@import "../../utils/scss/variables.scss";
+
+.hostNameContainer {
+  display: flex;
+  align-items: center;
+}
+.hostName {
+  font-size: 12px;
+  font-weight: 500;
+  color: $primary-color;
+  width: 60px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.hostImage {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+}

@@ -1,0 +1,26 @@
+@import "../../utils/scss/variables.scss";
+.titleLocation {
+  padding: 0 20px;
+  .title {
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .location {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  .tagContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .starHostContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

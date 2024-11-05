@@ -1,0 +1,13 @@
+@import "../../utils/scss/variables.scss";
+.star-rating {
+  display: flex;
+  .star {
+    margin-right: 5px;
+  }
+  .filled {
+    color: $primary-color;
+  }
+  .empty {
+    color: #e3e3e3;
+  }
+}

@@ -23,7 +23,7 @@ export function Home() {
       </Banner>
       <div className="mainContent">
         {data.map((item) => (
-          <Link to={`/logement/${item.id}`} key={item.id}>
+          <Link to={`/accommodation/${item.id}`} key={item.id}>
             <Card
               key={item.id}
               id={item.id}
