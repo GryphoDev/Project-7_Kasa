@@ -7,7 +7,8 @@ interface CardProps {
 
 export function Card({ id, title, cover }: CardProps) {
   return (
-    <div id={id} style={{ backgroundImage: `url(${cover})` }} className="card">
+    <div id={id} className="card">
+      <img src={cover} alt="" />
       <p>{title}</p>
     </div>
   );

@@ -1,9 +1,14 @@
 .card {
-  position: relative;
-  height: 250px;
   width: 100%;
-  border-radius: 10px;
-  background-size: cover;
+  position: relative;
+
+  img {
+    width: 100%;
+    min-height: 250px;
+    max-height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
   p {
     position: absolute;
     bottom: 15px;
@@ -11,5 +16,6 @@
     color: white;
     font-weight: 700;
     font-size: 16px;
+    padding-right: 15px;
   }
 }

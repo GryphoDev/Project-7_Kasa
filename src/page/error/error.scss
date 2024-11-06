@@ -1,0 +1,27 @@
+@import "../../utils/scss/variables.scss";
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: calc(100vh - 79.41px - 200px);
+  padding: 0 20px;
+  transform: translateY(-40px);
+  .codeError {
+    font-size: 96px;
+    font-weight: 700;
+    color: $primary-color;
+  }
+  .messageError {
+    font-size: 18px;
+    font-weight: 500;
+    color: $primary-color;
+    text-align: center;
+  }
+  .linkHome {
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

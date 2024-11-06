@@ -1,16 +1,18 @@
 @import "../../utils/scss/variables.scss";
-.titleLocation {
-  padding: 0 20px;
-  .title {
-    color: $primary-color;
-    font-size: 18px;
-    font-weight: 500;
-    margin-bottom: 5px;
-  }
-  .location {
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 10px;
+.globalContainer {
+  .contentContainer {
+    padding: 0 20px;
+    .title {
+      color: $primary-color;
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .location {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
   }
   .tagContainer {
     display: flex;
@@ -22,5 +24,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .collapseContainer {
+    margin-bottom: 30px;
   }
 }
