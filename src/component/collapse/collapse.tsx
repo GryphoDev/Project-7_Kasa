@@ -1,17 +1,16 @@
 import { ReactNode, useState } from "react";
 import arrowLeft from "../../utils/image/arrowLeft.svg";
 import "./collapse.scss";
-
 interface CollapseProps {
   title: ReactNode;
   content: ReactNode;
 }
+
 export function Collapse({ title, content }: CollapseProps) {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
     setIsOpen(!isOpen);
   };
-  console.log(content);
 
   return (
     <div className="collapse">
@@ -23,19 +22,17 @@ export function Collapse({ title, content }: CollapseProps) {
           alt="Toggle collapse"
         />
       </div>
-      {isOpen && (
-        <div className="collapseContent">
-          {Array.isArray(content) ? (
-            <ul>
-              {content.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          ) : (
-            <p className="content">{content}</p>
-          )}
-        </div>
-      )}
+      <div className={`collapseContent ${isOpen ? "openContent" : ""}`}>
+        {Array.isArray(content) ? (
+          <ul>
+            {content.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        ) : (
+          <p className="content">{content}</p>
+        )}
+      </div>
     </div>
   );
 }
