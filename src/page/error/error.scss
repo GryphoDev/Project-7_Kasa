@@ -6,12 +6,12 @@
   justify-content: space-evenly;
   align-items: center;
   min-height: calc(100vh - 79.41px - 200px);
-  padding: 0 20px;
-  transform: translateY(-40px);
+
   .codeError {
     font-size: 96px;
     font-weight: 700;
     color: $primary-color;
+    line-height: 1;
   }
   .messageError {
     font-size: 18px;
@@ -23,5 +23,67 @@
     font-size: 14px;
     font-weight: 500;
     text-decoration: underline;
+  }
+}
+@media (min-width: 480px) {
+  .errorContainer {
+    min-height: calc(100vh - 93.89px - 200px);
+
+    .codeError {
+      font-size: 120px;
+    }
+    .messageError {
+      font-size: 20px;
+    }
+    .linkHome {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .errorContainer {
+    min-height: calc(100vh - 113.62px - 200px);
+
+    .codeError {
+      font-size: 160px;
+    }
+    .messageError {
+      font-size: 24px;
+    }
+    .linkHome {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .errorContainer {
+    min-height: calc(100vh - 133.34px - 200px);
+
+    .codeError {
+      font-size: 200px;
+    }
+    .messageError {
+      font-size: 28px;
+    }
+    .linkHome {
+      font-size: 20px;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .errorContainer {
+    min-height: calc(100vh - 163.06px - 200px);
+
+    .codeError {
+      font-size: 288px;
+    }
+    .messageError {
+      font-size: 36px;
+    }
+    .linkHome {
+      font-size: 18px;
+    }
   }
 }

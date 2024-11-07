@@ -6,7 +6,7 @@ import { Collapse } from "../../component/collapse/collapse";
 
 export function About() {
   return (
-    <>
+    <div className="mainContainer">
       <Banner darken="0.3" backgroundImage={imgApropos}></Banner>
       <div className="collapseAbout">
         {aboutList.map((about) => (
@@ -17,6 +17,6 @@ export function About() {
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }

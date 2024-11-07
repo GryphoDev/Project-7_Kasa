@@ -19,3 +19,10 @@
     padding-right: 15px;
   }
 }
+@media (min-width: 1440px) {
+  .card {
+    img {
+      height: 340px;
+    }
+  }
+}

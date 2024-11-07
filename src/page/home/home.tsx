@@ -10,7 +10,7 @@ export function Home() {
   console.log(data);
 
   return (
-    <>
+    <div className="mainContainer">
       <Banner darken="0.6" backgroundImage={imgHomePage}>
         {isLargeScreen ? (
           "Chez vous, partout et ailleurs"
@@ -33,6 +33,6 @@ export function Home() {
           </Link>
         ))}
       </div>
-    </>
+    </div>
   );
 }
