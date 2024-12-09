@@ -7,7 +7,7 @@ import { Header } from "./component/header/header";
 import { Footer } from "./component/footer/footer";
 export function App() {
   return (
-    <Router>
+    <Router basename="/kasa/">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import { Carousel } from "../../component/carousel/carousel";
 import "./accommodation.scss";
 import data from "../../utils/data/data.json";
@@ -10,6 +10,9 @@ import { Collapse } from "../../component/collapse/collapse";
 export function Logement() {
   const { id } = useParams();
   const item = data.find((item) => item.id === id);
+  if (!item) {
+    return <Navigate to="/error" replace />;
+  }
   console.log(item);
 
   const details = item
