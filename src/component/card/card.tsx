@@ -1,4 +1,4 @@
-import "./card.scss";
+import styles from "./card.module.scss";
 interface CardProps {
   id: string;
   title: string;
@@ -7,9 +7,9 @@ interface CardProps {
 
 export function Card({ id, title, cover }: CardProps) {
   return (
-    <div id={id} className="card">
-      <img src={cover} alt="" />
-      <p>{title}</p>
+    <div id={id} className={styles.card}>
+      <img className={styles.card__picture} src={cover} alt={title} />
+      <h2 className={styles.card__title}>{title}</h2>
     </div>
   );
 }

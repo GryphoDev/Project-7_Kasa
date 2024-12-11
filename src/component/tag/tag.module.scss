@@ -1,0 +1,10 @@
+@use "../../utils/scss/variables.scss" as vars;
+
+.tag {
+  background-color: vars.$primary-color;
+  color: white;
+  font-size: clamp(10px, 1.36vw, 14px);
+  font-weight: 700;
+  padding: 5px 20px;
+  border-radius: clamp(5px, 0.82vw, 10px);
+}

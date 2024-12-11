@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(20px, 3.57vw, 45px) clamp(20px, 6.59vw, 100px)
+    clamp(27px, 4.23vw, 50px);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+
+  &__logo {
+    width: clamp(100px, 17.03vw, 210px);
+  }
+  &__navbar {
+    display: flex;
+    gap: clamp(26px, 4.73vw, 60px);
+    &__links {
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: clamp(12px, 2.05vw, 24px);
+    }
+  }
+}
+.active {
+  border-bottom: 1px solid black;
+}

@@ -1,0 +1,33 @@
+.carousel {
+  position: relative;
+  padding-bottom: clamp(10px, 2.2vw, 30px);
+  &__pictures {
+    width: 100%;
+    height: clamp(255px, 36.81vw, 415px);
+    object-fit: cover;
+    border-radius: 25px;
+  }
+  &__arrowLeft,
+  &__arrowRight {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: clamp(50px, 7.14vw, 80px);
+  }
+  &__arrowRight {
+    right: 25px;
+  }
+  &__arrowLeft {
+    left: 25px;
+  }
+  &__tagline {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: clamp(18px, 2.61vw, 28px);
+    font-weight: 500;
+  }
+}

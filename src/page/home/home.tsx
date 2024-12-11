@@ -3,14 +3,13 @@ import imgHomePage from "../../utils/image/imgHomePage.png";
 import { useIsLargeScreen } from "../../utils/hook/isLargeScreen";
 import data from "../../utils/data/data.json";
 import { Card } from "../../component/card/card";
-import "./home.scss";
+import styles from "./home.module.scss";
 import { Link } from "react-router-dom";
 export function Home() {
   const isLargeScreen = useIsLargeScreen();
-  console.log(data);
 
   return (
-    <div className="mainContainer">
+    <main className="mainContainer">
       <Banner darken="0.6" backgroundImage={imgHomePage}>
         {isLargeScreen ? (
           "Chez vous, partout et ailleurs"
@@ -21,7 +20,7 @@ export function Home() {
           </>
         )}
       </Banner>
-      <div className="mainContent">
+      <div className={styles.gallery}>
         {data.map((item) => (
           <Link to={`/accommodation/${item.id}`} key={item.id}>
             <Card
@@ -33,6 +32,6 @@ export function Home() {
           </Link>
         ))}
       </div>
-    </div>
+    </main>
   );
 }

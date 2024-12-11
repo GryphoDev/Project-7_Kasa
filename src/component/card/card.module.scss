@@ -2,14 +2,13 @@
   width: 100%;
   position: relative;
 
-  img {
+  &__picture {
     width: 100%;
-    min-height: 250px;
-    max-height: 340px;
+    height: clamp(250px, 32.42vw, 340px);
     border-radius: 10px;
     object-fit: cover;
   }
-  p {
+  &__title {
     position: absolute;
     bottom: 15px;
     left: 20px;
@@ -17,12 +16,5 @@
     font-weight: 700;
     font-size: 16px;
     padding-right: 15px;
-  }
-}
-@media (min-width: 1440px) {
-  .card {
-    img {
-      height: 340px;
-    }
   }
 }

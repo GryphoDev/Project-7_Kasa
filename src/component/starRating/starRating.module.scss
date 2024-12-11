@@ -1,0 +1,15 @@
+@use "../../utils/scss/variables.scss" as vars;
+.starRating {
+  display: flex;
+  &__star {
+    width: clamp(18px, 2.31vw, 24px);
+    height: auto;
+    margin-right: clamp(5px, 0.82vw, 10px);
+  }
+  &__filled {
+    color: vars.$primary-color;
+  }
+  &__empty {
+    color: #e3e3e3;
+  }
+}

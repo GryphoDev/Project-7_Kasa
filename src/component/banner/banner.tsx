@@ -1,4 +1,4 @@
-import "./banner.scss";
+import styles from "./banner.module.scss";
 import { ReactNode } from "react";
 
 interface BannerProps {
@@ -10,14 +10,14 @@ interface BannerProps {
 export function Banner({ children, backgroundImage, darken }: BannerProps) {
   return (
     <div
-      className="banner"
+      className={styles.banner}
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div
-        className="overlay"
+        className={styles.banner__overlay}
         style={{ backgroundColor: `rgba(0, 0, 0, ${darken})` }}
       >
-        <p>{children}</p>
+        <h1 className={styles.banner__overlay__title}>{children}</h1>
       </div>
     </div>
   );

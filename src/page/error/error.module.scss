@@ -1,0 +1,27 @@
+@use "../../utils/scss/variables.scss" as vars;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: calc(100vh - 200px - clamp(79.39px, 13.78vw, 163.06px));
+
+  &__code {
+    font-size: clamp(96px, 21.82vw, 288px);
+    font-weight: 700;
+    color: vars.$primary-color;
+    line-height: 1;
+  }
+  &__message {
+    font-size: clamp(18px, 3.07vw, 36px);
+    font-weight: 500;
+    color: vars.$primary-color;
+    text-align: center;
+  }
+  &__linkToHome {
+    font-size: clamp(14px, 1.82vw, 18px);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+}

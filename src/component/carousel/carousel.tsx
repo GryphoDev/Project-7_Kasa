@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./carousel.scss";
+import styles from "./carousel.module.scss";
 import arrowLeft from "../../utils/image/arrowLeft.svg";
 import arrowRight from "../../utils/image/arrowRight.svg";
 
@@ -25,16 +25,17 @@ export function Carousel({ item }: CarouselProps) {
 
   return (
     item && (
-      <div className="carouselContainer">
+      <div className={styles.carousel}>
         <img
-          className="carousel"
+          className={styles.carousel__pictures}
           src={item.pictures[index]}
           alt={`Photo de ${item.title}`}
         />
         {item.pictures.length > 1 && (
           <div>
             <img
-              className="arrowLeft"
+              className={styles.carousel__arrowLeft}
+              alt="arrowLeft"
               src={arrowLeft}
               onClick={() =>
                 setIndex(
@@ -43,11 +44,12 @@ export function Carousel({ item }: CarouselProps) {
               }
             />
             <img
-              className="arrowRight"
+              className={styles.carousel__arrowRight}
+              alt="arrowRight"
               src={arrowRight}
               onClick={() => setIndex((index + 1) % item.pictures.length)}
             />
-            <span className="tagline">{`${index + 1}/${
+            <span className={styles.carousel__tagline}>{`${index + 1}/${
               item.pictures.length
             }`}</span>
           </div>

@@ -1,0 +1,49 @@
+@use "../../utils/scss/variables.scss" as vars;
+
+.collapse {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 20px;
+  &__header {
+    width: 100%;
+    height: clamp(30px, 4.51vw, 52px);
+    background-color: vars.$primary-color;
+    border-radius: 5px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    &__title {
+      color: white;
+      font-size: clamp(14px, 2.16vw, 24px);
+      font-weight: 700;
+    }
+    &__icon {
+      rotate: 90deg;
+      transition: transform 0.5s ease-out;
+      &.open {
+        transform: rotate(540deg);
+      }
+    }
+  }
+  &__content {
+    font-size: clamp(12px, 1.7vw, 18px);
+    padding: 0 15px;
+    background-color: #f6f6f673;
+    border-radius: 0 0 5px 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    &.openContent {
+      max-height: 500px;
+      padding: 15px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .collapse {
+    flex: 1;
+  }
+}

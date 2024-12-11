@@ -1,0 +1,45 @@
+@use "../../utils/scss/variables.scss" as vars;
+.accommodation {
+  &__title {
+    color: vars.$primary-color;
+    font-size: clamp(18px, 3.07vw, 36px);
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  &__location {
+    font-size: clamp(14px, 1.82vw, 18px);
+    font-weight: 500;
+    margin-bottom: clamp(10px, 1.65vw, 20px);
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  &__stars {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.collapses {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 768px) {
+  .accommodation {
+    display: flex;
+    justify-content: space-between;
+    &__stars {
+      flex-direction: column-reverse;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
+  .collapses {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(30px, 4.76vw, 75px);
+  }
+}

@@ -1,5 +1,5 @@
-import "./tag.scss";
+import styles from "./tag.module.scss";
 
 export function Tag({ tagItem }: { tagItem: string }) {
-  return <span className="tag">{tagItem}</span>;
+  return <span className={styles.tag}>{tagItem}</span>;
 }

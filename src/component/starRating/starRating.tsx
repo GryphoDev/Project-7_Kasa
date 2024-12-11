@@ -1,4 +1,4 @@
-import "./starRating.scss";
+import styles from "./starRating.module.scss";
 
 interface StarRatingProps {
   rating: number;
@@ -10,11 +10,11 @@ export function StarRating({ rating }: StarRatingProps) {
   const emptyStars = totalStars - filledStars;
 
   return (
-    <div className="star-rating">
+    <div className={styles.starRating}>
       {[...Array(filledStars)].map((_, index) => (
         <svg
           key={index}
-          className="star filled"
+          className={`${styles.starRating__star} ${styles.starRating__filled}`}
           width="14"
           height="14"
           viewBox="0 0 14 14"
@@ -27,7 +27,7 @@ export function StarRating({ rating }: StarRatingProps) {
       {[...Array(emptyStars)].map((_, index) => (
         <svg
           key={index}
-          className="star empty"
+          className={`${styles.starRating__star} ${styles.starRating__empty}`}
           width="14"
           height="14"
           viewBox="0 0 14 14"

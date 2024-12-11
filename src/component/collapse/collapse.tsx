@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import arrowLeft from "../../utils/image/arrowLeft.svg";
-import "./collapse.scss";
+import styles from "./collapse.module.scss";
 interface CollapseProps {
   title: ReactNode;
   content: ReactNode;
@@ -13,16 +13,22 @@ export function Collapse({ title, content }: CollapseProps) {
   };
 
   return (
-    <div className="collapse">
-      <div className="collapseHeader" onClick={handleClick}>
-        <p className="collapseTitle">{title}</p>
+    <div className={styles.collapse}>
+      <div className={styles.collapse__header} onClick={handleClick}>
+        <h3 className={styles.collapse__header__title}>{title}</h3>
         <img
           src={arrowLeft}
-          className={`icon ${isOpen ? "open" : ""}`}
+          className={`${styles.collapse__header__icon} ${
+            isOpen ? styles.open : ""
+          }`}
           alt="Toggle collapse"
         />
       </div>
-      <div className={`collapseContent ${isOpen ? "openContent" : ""}`}>
+      <div
+        className={`${styles.collapse__content} ${
+          isOpen ? styles.openContent : ""
+        }`}
+      >
         {Array.isArray(content) ? (
           <ul>
             {content.map((item, index) => (
@@ -30,7 +36,7 @@ export function Collapse({ title, content }: CollapseProps) {
             ))}
           </ul>
         ) : (
-          <p className="content">{content}</p>
+          <p>{content}</p>
         )}
       </div>
     </div>

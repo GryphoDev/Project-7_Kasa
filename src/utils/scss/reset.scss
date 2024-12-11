@@ -64,34 +64,15 @@ ol {
 #__next {
   isolation: isolate;
 }
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+}
 .mainContainer {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 20px;
-  min-height: calc(100vh - 79.41px - 200px);
-  height: 100%;
-}
-@media (min-width: 480px) {
-  .mainContainer {
-    padding: 0 40px;
-    min-height: calc(100vh - 93.89px - 200px);
-  }
-}
-@media (min-width: 768px) {
-  .mainContainer {
-    padding: 0 60px;
-    min-height: calc(100vh - 113.62px - 200px);
-  }
-}
-@media (min-width: 1024px) {
-  .mainContainer {
-    padding: 0 80px;
-    min-height: calc(100vh - 133.34px - 200px);
-  }
-}
-@media (min-width: 1440px) {
-  .mainContainer {
-    padding: 0 100px;
-    min-height: calc(100vh - 163.06px - 200px);
-  }
+  flex: 1;
+  padding: 0 clamp(20px, 6.59vw, 100px);
 }

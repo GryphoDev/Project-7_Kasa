@@ -1,4 +1,4 @@
-import "./host.scss";
+import styles from "./host.module.scss";
 
 interface HostProps {
   name: string;
@@ -13,13 +13,17 @@ export function Host({ host }: HostComponentProps): JSX.Element {
   const [firstName, lastName] = host.name.split(" ");
 
   return (
-    <div className="hostNameContainer">
-      <p className="hostName">
+    <div className={styles.host}>
+      <p className={styles.host__name}>
         {firstName}
         <br />
         {lastName}
       </p>
-      <img className="hostImage" src={host.picture} alt="" />
+      <img
+        className={styles.host__picture}
+        src={host.picture}
+        alt={`${firstName} ${lastName}`}
+      />
     </div>
   );
 }

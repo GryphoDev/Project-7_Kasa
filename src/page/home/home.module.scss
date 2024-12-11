@@ -1,0 +1,22 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(20px, 4.4vw, 60px);
+  margin-bottom: clamp(20px, 3.57vw, 45px);
+}
+
+@media (min-width: 768px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: clamp(30px, 3.62vw, 50px);
+    border-radius: 25px;
+    background-color: #f6f6f6;
+  }
+}
+
+@media (min-width: 1440px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

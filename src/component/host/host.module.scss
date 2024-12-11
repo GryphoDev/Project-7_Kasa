@@ -1,0 +1,18 @@
+@use "../../utils/scss/variables.scss" as vars;
+
+.host {
+  display: flex;
+  align-items: center;
+  &__name {
+    font-size: clamp(12px, 1.7vw, 18px);
+    font-weight: 500;
+    color: vars.$primary-color;
+    text-align: right;
+    margin-right: 10px;
+  }
+  &__picture {
+    width: clamp(32px, 5.27vw, 64px);
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
