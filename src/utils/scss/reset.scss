@@ -73,6 +73,14 @@ ol {
 .mainContainer {
   max-width: 1440px;
   margin: 0 auto;
+  opacity: 0;
   flex: 1;
   padding: 0 clamp(20px, 6.59vw, 100px);
+  animation: fade-in 1000ms 300ms forwards;
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
 }

@@ -1,6 +1,6 @@
 import { Banner } from "../../component/banner/banner";
-import imgApropos from "../../utils/image/imgApropos.png";
-import { aboutList } from "../../utils/data/aboutList";
+import imgApropos from "../../utils/image/imgApropos.webp";
+import aboutList from "../../utils/data/aboutList.json";
 import { Collapse } from "../../component/collapse/collapse";
 import styles from "./about.module.scss";
 

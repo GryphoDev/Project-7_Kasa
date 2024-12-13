@@ -9,7 +9,7 @@ interface HostComponentProps {
   host: HostProps;
 }
 
-export function Host({ host }: HostComponentProps): JSX.Element {
+export function Host({ host }: HostComponentProps) {
   const [firstName, lastName] = host.name.split(" ");
 
   return (

@@ -1,5 +1,5 @@
 import { Banner } from "../../component/banner/banner";
-import imgHomePage from "../../utils/image/imgHomePage.png";
+import imgHomePage from "../../utils/image/imgHomePage.webp";
 import { useIsLargeScreen } from "../../utils/hook/isLargeScreen";
 import data from "../../utils/data/data.json";
 import { Card } from "../../component/card/card";

@@ -24,7 +24,7 @@ export function Logement() {
   return (
     item && (
       <main className="mainContainer">
-        <Carousel item={item} />
+        <Carousel pictures={item.pictures} title={item.title} />
         <div className={styles.accommodation}>
           <div>
             <h2 className={styles.accommodation__title}>{item.title}</h2>

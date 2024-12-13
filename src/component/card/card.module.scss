@@ -7,6 +7,7 @@
     height: clamp(250px, 32.42vw, 340px);
     border-radius: 10px;
     object-fit: cover;
+    object-position: center;
   }
   &__title {
     position: absolute;
