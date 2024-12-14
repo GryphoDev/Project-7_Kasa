@@ -1,15 +1,17 @@
 import styles from "./host.module.scss";
 
 interface HostProps {
-  name: string;
-  picture: string;
+  name: string; // The name of the host
+  picture: string; // The URL of the host's picture
 }
 
-interface HostComponentProps {
-  host: HostProps;
-}
-
-export function Host({ host }: HostComponentProps) {
+/**
+ * Host component that displays the host's name and picture.
+ * @param {Object} props - The component props.
+ * @param {HostProps} props.host - The host object containing the name and picture.
+ * @returns {JSX.Element} The host component.
+ */
+export function Host({ host }: { host: HostProps }): JSX.Element {
   const [firstName, lastName] = host.name.split(" ");
 
   return (

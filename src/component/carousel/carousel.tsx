@@ -3,13 +3,20 @@ import styles from "./carousel.module.scss";
 import arrowLeft from "../../utils/image/arrowLeft.svg";
 import arrowRight from "../../utils/image/arrowRight.svg";
 
-export function Carousel({
-  pictures,
-  title,
-}: {
-  pictures: string[];
-  title: string;
-}) {
+/**
+ * Props for the Carousel component.
+ */
+interface CarouselProps {
+  pictures: string[]; // Array of image URLs to display in the carousel
+  title: string; // Carousel title
+}
+
+/**
+ * Carousel component to display a set of pictures in a sliding format with navigation.
+ * @param {CarouselProps} props - Props containing the array of picture URLs and the title.
+ * @returns {JSX.Element} The carousel component.
+ */
+export function Carousel({ pictures, title }: CarouselProps): JSX.Element {
   const [index, setIndex] = useState(0);
 
   return (

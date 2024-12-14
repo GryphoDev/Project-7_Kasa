@@ -1,10 +1,13 @@
 import styles from "./starRating.module.scss";
 
-interface StarRatingProps {
-  rating: number;
-}
+/**
+ * StarRating component that displays a rating using filled and empty star icons.
+ * @param {object} props - Component props.
+ * @param {number} props.rating - The rating value between 0 and 5.
+ * @returns {JSX.Element} The star rating component.
+ */
 
-export function StarRating({ rating }: StarRatingProps) {
+export function StarRating({ rating }: { rating: number }): JSX.Element {
   const totalStars = 5;
   const filledStars = Math.round(rating);
   const emptyStars = totalStars - filledStars;

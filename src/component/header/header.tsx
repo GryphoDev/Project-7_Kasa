@@ -2,8 +2,13 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./header.module.scss";
 import Logo from "../../utils/image/Logo.svg";
 
-export function Header() {
+/**
+ * Header component that displays the navigation menu.
+ * @returns {JSX.Element} The header component.
+ */
+export function Header(): JSX.Element {
   const location = useLocation();
+
   return (
     <header className={styles.header}>
       <img className={styles.header__logo} src={Logo} alt="Logo de Kasa" />
