@@ -21,9 +21,9 @@
     }
     &__icon {
       rotate: 90deg;
-      transition: transform 0.5s ease-out;
+      transition: transform 0.3s ease-out;
       &.open {
-        transform: rotate(540deg);
+        transform: rotate(180deg);
       }
     }
   }

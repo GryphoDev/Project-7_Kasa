@@ -24,6 +24,19 @@ export function Collapse({ title, content }: CollapseProps): JSX.Element {
     setIsOpen(!isOpen);
   };
 
+  const renderContent = () => {
+    if (Array.isArray(content)) {
+      return (
+        <ul>
+          {content.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+      );
+    }
+    return <p>{content}</p>;
+  };
+
   return (
     <div className={styles.collapse}>
       <div className={styles.collapse__header} onClick={handleClick}>
@@ -41,15 +54,7 @@ export function Collapse({ title, content }: CollapseProps): JSX.Element {
           isOpen ? styles.openContent : ""
         }`}
       >
-        {Array.isArray(content) ? (
-          <ul>
-            {content.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>{content}</p>
-        )}
+        {renderContent()}
       </div>
     </div>
   );

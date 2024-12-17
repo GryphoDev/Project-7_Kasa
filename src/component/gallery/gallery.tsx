@@ -1,36 +1,36 @@
 import { useState } from "react";
-import styles from "./carousel.module.scss";
+import styles from "./gallery.module.scss";
 import arrowLeft from "../../utils/image/arrowLeft.svg";
 import arrowRight from "../../utils/image/arrowRight.svg";
 
 /**
- * Props for the Carousel component.
+ * Props for the Gallery component.
  */
-interface CarouselProps {
-  pictures: string[]; // Array of image URLs to display in the carousel
-  title: string; // Carousel title
+interface GalleryProps {
+  pictures: string[]; // Array of image URLs to display in the gallery
+  title: string; // Gallery title
 }
 
 /**
- * Carousel component to display a set of pictures in a sliding format with navigation.
- * @param {CarouselProps} props - Props containing the array of picture URLs and the title.
- * @returns {JSX.Element} The carousel component.
+ * Gallery component to display a set of pictures in a sliding format with navigation.
+ * @param {GalleryProps} props - Props containing the array of picture URLs and the title.
+ * @returns {JSX.Element} The gallery component.
  */
-export function Carousel({ pictures, title }: CarouselProps): JSX.Element {
+export function Gallery({ pictures, title }: GalleryProps): JSX.Element {
   const [index, setIndex] = useState(0);
 
   return (
     pictures && (
-      <div className={styles.carousel}>
+      <div className={styles.gallery}>
         <img
-          className={styles.carousel__pictures}
+          className={styles.gallery__pictures}
           src={pictures[index]}
           alt={`Photo de ${title}`}
         />
         {pictures.length > 1 && (
           <div>
             <img
-              className={styles.carousel__arrowLeft}
+              className={styles.gallery__arrowLeft}
               alt="arrowLeft"
               src={arrowLeft}
               onClick={() =>
@@ -38,12 +38,12 @@ export function Carousel({ pictures, title }: CarouselProps): JSX.Element {
               }
             />
             <img
-              className={styles.carousel__arrowRight}
+              className={styles.gallery__arrowRight}
               alt="arrowRight"
               src={arrowRight}
               onClick={() => setIndex((index + 1) % pictures.length)}
             />
-            <span className={styles.carousel__tagline}>{`${index + 1}/${
+            <span className={styles.gallery__tagline}>{`${index + 1}/${
               pictures.length
             }`}</span>
           </div>

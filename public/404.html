@@ -4,6 +4,13 @@
     <meta charset="utf-8" />
     <title>Single Page App</title>
     <script type="text/javascript">
+      /**
+       * Reorganizes the URL for SPA routing:
+       * - Keeps the first `pathSegmentsToKeep` segments of the path.
+       * - Moves the rest into the query string prefixed by "/?/".
+       * - Replaces "&" with "~and~" to avoid conflicts.
+       * - Redirects to the new URL format.
+       */
       var pathSegmentsToKeep = 1;
       var l = window.location;
       l.replace(

@@ -15,7 +15,6 @@
     display: flex;
     gap: clamp(26px, 4.73vw, 60px);
     &__links {
-      text-transform: uppercase;
       font-weight: 500;
       font-size: clamp(12px, 2.05vw, 24px);
     }

@@ -6,6 +6,9 @@
     <link rel="icon" href="data:," />
     <title>Kasa</title>
     <script type="text/javascript">
+      /** * Fixes SPA routing issues by cleaning up the URL. * Replaces "~and~"
+      with "&" in the query string if it starts with a "/". * Updates the
+      browser's address bar without reloading the page. */
       (function (l) {
         if (l.search[1] === "/") {
           var decoded = l.search

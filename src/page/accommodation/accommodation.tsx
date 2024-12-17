@@ -1,7 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import styles from "./accommodation.module.scss";
 import data from "../../utils/data/data.json";
-import { Carousel } from "../../component/carousel/carousel";
+import { Gallery } from "../../component/gallery/gallery";
 import { Tag } from "../../component/tag/tag";
 import { StarRating } from "../../component/starRating/starRating";
 import { Host } from "../../component/host/host";
@@ -12,7 +12,7 @@ import { Collapse } from "../../component/collapse/collapse";
  * If the accommodation is not found, redirects to the error page.
  * @returns {JSX.Element} The accommodation page component.
  */
-export function Logement(): JSX.Element {
+export function Accomodation(): JSX.Element {
   const { id } = useParams();
   const item = data.find((item) => item.id === id);
   if (!item) {
@@ -30,7 +30,7 @@ export function Logement(): JSX.Element {
       {/**
        * Carousel displaying the accommodation's pictures.
        */}
-      <Carousel pictures={item.pictures} title={item.title} />
+      <Gallery pictures={item.pictures} title={item.title} />
 
       {/**
        * Accommodation details including title, location, tags, star rating, and host information.

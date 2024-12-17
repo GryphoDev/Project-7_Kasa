@@ -10,6 +10,18 @@ import styles from "./error.module.scss";
 export function Error(): JSX.Element {
   const isLargeScreen = useIsLargeScreen();
 
+  const renderContent = () => {
+    if (isLargeScreen) {
+      return "Oups! La page que vous demandez n'existe pas.";
+    } else {
+      return (
+        <>
+          Oups! La page que <br /> vous demandez n'existe pas.
+        </>
+      );
+    }
+  };
+
   return (
     <main className="mainContainer">
       <div className={styles.error}>
@@ -17,15 +29,7 @@ export function Error(): JSX.Element {
         {/**
          * Displays the error message, dynamically formatted based on screen size.
          */}
-        <p className={styles.error__message}>
-          {isLargeScreen ? (
-            "Oups! La page que vous demandez n'existe pas."
-          ) : (
-            <>
-              Oups! La page que <br /> vous demandez n'existe pas.
-            </>
-          )}
-        </p>
+        <p className={styles.error__message}> {renderContent()}</p>
         {/**
          * Link to navigate back to the home page.
          */}

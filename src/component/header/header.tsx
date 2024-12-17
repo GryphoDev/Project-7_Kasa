@@ -1,13 +1,19 @@
 import { Link, useLocation } from "react-router-dom";
 import styles from "./header.module.scss";
 import Logo from "../../utils/image/Logo.svg";
+import { useIsLargeScreen } from "../../utils/hook/isLargeScreen";
 
 /**
  * Header component that displays the navigation menu.
  * @returns {JSX.Element} The header component.
  */
 export function Header(): JSX.Element {
+  const isLargeScreen = useIsLargeScreen(768);
   const location = useLocation();
+
+  const linksContent = isLargeScreen
+    ? ["Accueil", "A Propos"]
+    : ["ACCUEIL", "A PROPOS"];
 
   return (
     <header className={styles.header}>
@@ -19,7 +25,7 @@ export function Header(): JSX.Element {
               className={location.pathname === "/" ? styles.active : ""}
               to="/"
             >
-              Acceuil
+              {linksContent[0]}
             </Link>
           </li>
           <li className={styles.header__navbar__links}>
@@ -27,7 +33,7 @@ export function Header(): JSX.Element {
               className={location.pathname === "/about" ? styles.active : ""}
               to="/about"
             >
-              A Propos
+              {linksContent[1]}
             </Link>
           </li>
         </ul>
